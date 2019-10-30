@@ -27,6 +27,7 @@ class SleepQualityViewModel(
         val database: SleepDatabaseDao) : ViewModel() {
     private val viewModelJob = Job()
     private val uiScope = CoroutineScope(Dispatchers.Main + viewModelJob)
+
     private val _navigateToSleepTracker = MutableLiveData<Boolean?>()
 
     val navigateToSleepTracker: LiveData<Boolean?>
